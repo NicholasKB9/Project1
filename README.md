@@ -3,8 +3,10 @@ Contents for Project 1, Cybersecurity Bootcamp 2022.
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
+![image](https://user-images.githubusercontent.com/94084235/156965949-f53e547b-fc83-4908-bf9c-5bb12b8ac41f.png)
 
- 
+
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it, such as Filebeat.
 
 ---
@@ -78,11 +80,12 @@ Machines within the network can only be accessed by SSH. I adjusted the network 
 
 A summary of the access policies in place can be found in the table below:
 
-	         Name			 Publicly Accessible		   Allowed IP Addresses
-Jump Box	Yes	24.30.49.60
-Web1	Yes	20.124.213.1, 24.30.49.60
-Web2	Yes	20.124.213.1, 24.30.49.60
-ELK	Yes	24.30.49.60
+| Name     | Publicly Accessible | Allowed IP Addresses     |
+|----------|---------------------|--------------------------|
+| Jump Box |Yes                  | 24.30.49.60  	    |
+| Web1     |Yes                  | 20.124.213.1, 24.30.49.60|
+| Web2     |Yes                  | 20.124.213.1, 24.30.49.60|
+
 
 ### Elk Configuration
 
@@ -96,18 +99,9 @@ The playbook implements the following tasks:
 •	Download a docker web container image from sebp/elk:761 and assign it to use ports 5601, 9200, 5044
 
 
-
-
-
-
-
-
-
-
-
-
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
  
+![image](https://user-images.githubusercontent.com/94084235/156966188-ddd073f4-d360-4f4a-8f59-71cb89b8058c.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
