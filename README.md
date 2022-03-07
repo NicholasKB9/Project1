@@ -3,13 +3,15 @@ Contents for Project 1, Cybersecurity Bootcamp 2022.
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
-![image](https://user-images.githubusercontent.com/94084235/156965949-f53e547b-fc83-4908-bf9c-5bb12b8ac41f.png)
+![image](https://user-images.githubusercontent.com/94084235/156966726-9e1a5c9f-0f6c-4e1a-b4e3-b986c96440e4.png)
+
 
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it, such as Filebeat.
 
----
+filebeat-playbook.yml
+[---
 - name: installing and launching filebeat
   hosts: webservers
   become: yes
@@ -41,7 +43,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
       enabled: yes
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
