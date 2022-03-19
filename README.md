@@ -87,8 +87,8 @@ A summary of the access policies in place can be found in the table below:
 | Name     | Publicly Accessible | Allowed IP Addresses     |
 |----------|---------------------|--------------------------|
 | Jump Box |Yes                  | 24.30.49.60  	    |
-| Web1     |Yes                  | 20.124.213.1, 24.30.49.60|
-| Web2     |Yes                  | 20.124.213.1, 24.30.49.60|
+| Web1     |Yes                  | 20.124.213.1, pr.vt.ip.add|
+| Web2     |Yes                  | 20.124.213.1, pr.vt.ip.add|
 
 
 ### Elk Configuration
