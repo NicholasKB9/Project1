@@ -3,7 +3,8 @@ Contents for Project 1, Cybersecurity Bootcamp 2022.
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
-![image](https://user-images.githubusercontent.com/94084235/156966726-9e1a5c9f-0f6c-4e1a-b4e3-b986c96440e4.png)
+# ![image](https://user-images.githubusercontent.com/94084235/156966726-9e1a5c9f-0f6c-4e1a-b4e3-b986c96440e4.png)
+[Untitled Diagram.drawio-2.pdf](https://github.com/NicholasKB9/Project1/files/8309718/Untitled.Diagram.drawio-2.pdf)
 
 
 
