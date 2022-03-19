@@ -4,7 +4,7 @@ Contents for Project 1, Cybersecurity Bootcamp 2022.
 
 The files in this repository were used to configure the network depicted below.
 
-[Untitled Diagram.drawio-2.pdf](https://github.com/NicholasKB9/Project1/files/8309718/Untitled.Diagram.drawio-2.pdf)
+![image](https://github.com/NicholasKB9/Project1/files/8309718/Untitled.Diagram.drawio-2.pdf)
 
 
 
