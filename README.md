@@ -78,6 +78,7 @@ Only the load balancer machine can accept connections from the Internet. Access 
 -	10.1.0.4
 -	10.1.0.5
 -	10.0.0.4
+
 Machines within the network can only be accessed by SSH. I adjusted the network security rules to allow SSH into the aforementioned machines from my personal workstation at 24.30.49.60.
 
 A summary of the access policies in place can be found in the table below:
