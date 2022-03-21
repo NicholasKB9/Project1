@@ -1,47 +1,15 @@
 # Project1
-Contents for Project 1, Cybersecurity Bootcamp 2022.
+
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
 ![image](https://github.com/NicholasKB9/Project1/files/8309718/Untitled.Diagram.drawio-2.pdf)
 
-
-
-
+---
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it, such as Filebeat.
 
-filebeat-playbook.yml
 
-- name: installing and launching filebeat
-  hosts: webservers
-  become: yes
-  tasks:
-
-  - name: download filebeat deb
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
-
-  - name: install filebeat deb
-    command: dpkg -i filebeat-7.6.1-amd64.deb
-
-  - name: drop in filebeat.yml 
-    copy:
-      src: /etc/ansible/filebeat-config.yml
-      dest: /etc/filebeat/filebeat.yml
-
-  - name: enable and configure system module
-    command: filebeat modules enable system
-
-  - name: setup filebeat
-    command: filebeat setup
-
-  - name: start filebeat service
-    command: service filebeat start
-
-  - name: enable service filebeat on boot
-    systemd:
-      name: filebeat
-      enabled: yes
 
 This document contains the following details:
 - Description of the Topology
@@ -96,11 +64,11 @@ A summary of the access policies in place can be found in the table below:
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it sets up the machine in a shorter time compared to the time it would take to manually set up the system. Furthermore, automation allows the set up to be easily replicated on another system. Automation also allows a user to see what is installed since the automation playbooks, such as Ansible, lists installed programs in an executable file.
 
 The playbook implements the following tasks:
-•	Install Docker.io
-•	Install python-pip3
-•	Install Docker
-•	Increase virtual memory 
-•	Download a docker web container image from sebp/elk:761 and assign it to use ports 5601, 9200, 5044
+- Install Docker.io
+- Install python-pip3
+- Install Docker
+- Increase virtual memory 
+- Download a docker web container image from sebp/elk:761 and assign it to use ports 5601, 9200, 5044
 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -118,57 +86,6 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 Filebeat monitors the logs on the system and provides details such as the source of the traffic. Metricbeat provides multiple visual representation of data such as graphs.
-
-
-
-
-
-
-
-
-
-
----
-  - name: Config web vm with docker
-    hosts: webservers
-    become: true
-    tasks:
-
-    - name: Uninstall apache2  (state=present is optional)
-      apt: 
-        name: apache2
-        state: absent
-
-    - name: docker.io
-      apt:
-        update_cache: yes
-        name: docker.io
-        state: present 
-
-    - name: Install pip3
-      apt:
-        name: python3-pip
-        state: present
-
-    - name: Install Python Docker Module 
-      pip:
-        name: docker
-        state: present
- 
-    - name: download and launch a docker web container
-      docker_container:
-        name: dvwa
-        image: cyberxsecurity/dvwa
-        state: started
-        restart_policy: always
-        published_ports: 80:80
-
-    - name: Enable docker service
-      systemd:
-        name: docker
-        enabled: yes
-
-
 
 
 
